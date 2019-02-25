@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 # -*- coding: utf-8 -*-
 """BinTreeAssignment.ipynb
 
@@ -14,8 +15,6 @@ The nodes (below) have a value instance variable that is comparable with the nor
 
 The nodes also have pointers to their child nodes.
 """
-
-#! /usr/bin/python3
 
 class Node:
     def __init__(self, data):
