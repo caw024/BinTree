@@ -166,19 +166,21 @@ def Process(infilename,outfilename):
   words = lines[0].split(',')
   ints = [int(x) for x in words]
   
-  avg = 0.0
-  for i in ints:
-    avg += int(i)
-  avg /= len(words)
-  print("avg value is " + str(avg))
-  logval = math.log(len(words),2)
-  print("log base 2 value is " + str(logval))
   
   A = BinTree(ints)
   #use lines[1] , which is argument for has_depth
   args = lines[1].split(',')
   argint = [int(x) for x in args]
   ans = [A.has_depth(x) for x in argint]
+
+  avg = 0.0
+  for i in ans:
+    avg += i
+  avg /= len(ans)
+  print("avg value is " + str(avg))
+  logval = math.log(len(words),2)
+  print("log base 2 value is " + str(logval))
+  
   s = [str(x) for x in ans]
   s = ','.join(s)
   
@@ -190,4 +192,4 @@ def Process(infilename,outfilename):
 def main():
   Process(sys.argv[1],sys.argv[2])
 
- 
+main()
